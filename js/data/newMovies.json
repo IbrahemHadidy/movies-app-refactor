@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Venom",
+    "timeAndGenre": "120min | Action",
+    "image": "img/m1.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Dunkerk",
+    "timeAndGenre": "105min | Adventure",
+    "image": "img/m2.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Batman & Superman",
+    "timeAndGenre": "100min | Thriller",
+    "image": "img/m3.jpg",
+    "link": "#"
+  },
+  {
+    "title": "John Wick",
+    "timeAndGenre": "120min | Adventure",
+    "image": "img/m4.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Aquaman",
+    "timeAndGenre": "130min | Action",
+    "image": "img/m5.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Black Panther",
+    "timeAndGenre": "90min | Thriller",
+    "image": "img/m6.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Thor",
+    "timeAndGenre": "130min | Action",
+    "image": "img/m7.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Bumblebee",
+    "timeAndGenre": "100min | Thriller",
+    "image": "img/m8.png",
+    "link": "#"
+  },
+  {
+    "title": "Mortal Engines",
+    "timeAndGenre": "100min | Action",
+    "image": "img/m9.jpg",
+    "link": "#"
+  },
+  {
+    "title": "UnderWorld Blood Wars",
+    "timeAndGenre": "100min | Action",
+    "image": "img/m10.jpg",
+    "link": "#"
+  }
+]

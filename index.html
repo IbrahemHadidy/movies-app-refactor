@@ -6,8 +6,8 @@
 
     <title>Movies App</title>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- font-awesome icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,200 +35,23 @@
       }
     </style>
 
-    <!-- tailwind cdn -->
+    <!-- tailwind development cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- javascript -->
+    <script src="js/main.js" type="module"></script>
   </head>
 
   <body
     class="m-0 p-0 box-border list-none no-underline scroll-py-8 bg-[#020307] text-white font-poppins"
   >
-    <!-- Navbar  -->
-    <header
-      class="fixed top-0 left-0 w-full flex justify-between items-center py-[20px] px-[100px] z-[1000] transition duration-500 max-lg:px-[4%] max-lg:py-[18px] max-md:px-[4%] max-md:py-[12px]"
-    >
-      <a
-        id="header-logo"
-        href="#home"
-        class="text-[1.1rem] font-semibold flex items-center gap-x-2"
-      >
-        <i class="fa-solid fa-film text-2xl text-[#ff2c1f]"></i> Movies
-      </a>
-      <div
-        id="menu-icon"
-        class="text-[24px] cursor-pointer z-[100001] hidden max-md:block"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <!-- menu -->
-      <ul
-        id="navbar"
-        class="flex gap-20 max-md:absolute max-md:top-[-578px] max-md:left-0 max-md:right-0 max-md:flex max-md:flex-col max-md:bg-white max-md:gap-[1.4rem] max-md:p-5 max-md:shadow-[4px_4px_0_4px_rgba(14,55,54,0.15)] max-md:text-center"
-      >
-        <li class="relative">
-          <a
-            class="font-medium text-base text-[#ff2c1f] after:absolute after:bg-[#ff2c1f] after:w-0 after:h-[3px] after:left-0 after:bottom-[-4px] after:transition-all after:duration-400 hover:after:w-full max-md:text-[#020307] max-md:transition-all max-md:duration-300 max-md:ease-linear max-md:hover:text-[#ff2c1f] max-md:after:hidden"
-            href="#home"
-            >Home</a
-          >
-        </li>
-        <li class="relative">
-          <a
-            class="font-medium text-base text-[#ff2c1f] after:absolute after:bg-[#ff2c1f] after:w-0 after:h-[3px] after:left-0 after:bottom-[-4px] after:transition-all after:duration-400 hover:after:w-full max-md:text-[#020307] max-md:transition-all max-md:duration-300 max-md:ease-linear max-md:hover:text-[#ff2c1f] max-md:after:hidden"
-            href="#movies"
-            >Movies</a
-          >
-        </li>
-        <li class="relative">
-          <a
-            class="font-medium text-base text-[#ff2c1f] after:absolute after:bg-[#ff2c1f] after:w-0 after:h-[3px] after:left-0 after:bottom-[-4px] after:transition-all after:duration-400 hover:after:w-full max-md:text-[#020307] max-md:transition-all max-md:duration-300 max-md:ease-linear max-md:hover:text-[#ff2c1f] max-md:after:hidden"
-            href="#coming soon"
-            >Coming Soon</a
-          >
-        </li>
-        <li class="relative">
-          <a
-            class="font-medium text-base text-[#ff2c1f] after:absolute after:bg-[#ff2c1f] after:w-0 after:h-[3px] after:left-0 after:bottom-[-4px] after:transition-all after:duration-400 hover:after:w-full max-md:text-[#020307] max-md:transition-all max-md:duration-300 max-md:ease-linear max-md:hover:text-[#ff2c1f] max-md:after:hidden"
-            href="#newsletter"
-            >Newsletter</a
-          >
-        </li>
-      </ul>
-      <a
-        href="#"
-        class="bg-[#ff2c1f] text-white py-[0.7rem] px-[1.4rem] rounded-[0.5rem] font-normal hover:bg-[#fa1216] max-md:px-[1.2rem] max-md:py-[0.6rem]"
-        >Sign In</a
-      >
-    </header>
-
-    <!-- Home -->
-    <section
-      id="home"
-      class="py-[4.5rem] px-[1.5rem] w-full min-h-screen bg-cover bg-center relative max-lg:px-[4%] max-lg:py-[50px] max-md:px-[4%] max-md:py-[30px]"
-      style="background-image: url('img/home1.jpg')"
-    >
-      <div
-        class="absolute top-[40%] pl-[80px] max-lg:px-[100px] max-lg:px-[4%] max-lg:py-0 max-md:text-[2.4rem]"
-      >
-        <span
-          class="font-medium text-black uppercase"
-        >
-          Sony's Spider-Man Universe
-        </span>
-        <h2
-          class="text-white text-[4rem] font-bold mb-4 max-lg:text-[3rem] max-md:text-[2.4rem]"
-        >
-          Venom
-        </h2>
-        <a
-          href="#"
-          class="bg-[#ff2c1f] text-white py-[0.7rem] px-[1.4rem] rounded-[0.5rem] font-normal transition-all duration-300 ease-in-out hover:bg-[#fa1216] max-md:px-[1.2rem] max-md:py-[0.6rem] max-md:text-[0.9rem]"
-        >
-          Book Now
-        </a>
-      </div>
-    </section>
-
-    <!-- New Movies -->
-    <section
-      id="new-movies"
-      class="py-[4.5rem] px-[1.5rem] max-lg:px-[4%] max-lg:py-[50px]"
-    >
-      <h2
-        class="font-medium text-[1.2rem] uppercase border-b-[1px] border-[#ff2c1f] max-w-[1000px] mx-auto"
-      >
-        Opening this Week
-      </h2>
-      <div
-        class="max-w-[1000px] mx-auto grid grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] gap-4 mt-8 max-md:grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]"
-      ></div>
-    </section>
-
-    <!-- Coming Soon -->
-    <section
-      id="coming-soon"
-      class="py-[4.5rem] px-[1.5rem] max-lg:px-[4%] max-lg:py-[50px]"
-    >
-      <h2
-        class="font-medium text-[1.2rem] uppercase border-b-[1px] border-[#ff2c1f] max-w-[1000px] mx-auto"
-      >
-        Coming Soon
-      </h2>
-      <div
-        class="max-w-[1000px] mx-auto grid grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] gap-4 mt-8 max-md:grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]"
-      ></div>
-    </section>
-
-    <!-- Newsletter -->
-    <section
-      id="newsletter"
-      class="py-[4.5rem] px-[1.5rem] max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-8 max-lg:px-[4%] max-lg:py-[50px]"
-    >
-      <h2 class="text-2xl font-semibold text-center">
-        Subscribe To Get <br />
-        Newsletter
-      </h2>
-      <form class="flex items-center p-2.5 bg-white rounded-lg">
-        <input
-          type="email"
-          placeholder="Enter Email..."
-          class="border-0 outline-0 w-72 placeholder:text-[#020307] placeholder:text-[0.8rem] placeholder:font-normal"
-        />
-        <input
-          type="submit"
-          value="Subscribe"
-          class="border-0 outline-0 cursor-pointer bg-[#ff2c1f] text-white py-2.5 px-5 rounded-lg font-semibold uppercase hover:bg-[#fa1216] placeholder:text-[#020307] placeholder:text-[0.8rem] placeholder:font-normal max-md:px-[1.2rem] max-md:py-[0.6rem]"
-        />
-      </form>
-    </section>
-
-    <!-- footer -->
-    <footer
-      class="flex items-center justify-between max-w-[1000px] mx-auto max-sm:flex-col max-sm:items-center max-sm:space-y-4 max-lg:px-[4%] max-lg:py-[50px]"
-    >
-      <a
-        href="index.html"
-        class="text-[1.1rem] font-semibold text-white flex items-center gap-x-[0.5rem]"
-      >
-        <i class="fa-solid fa-film text-2xl text-[24px] text-[#ff2c1f]"></i>
-        Movies
-      </a>
-      <div class="flex items-center gap-x-2">
-        <a
-          href="#"
-          class="flex items-center justify-center w-14 h-14 rounded-full text-2xl leading-[55px] bg-white text-[#ff2c1f] border-4 border-[rgba(2,3,7,0.4)] transition-all duration-200 hover:bg-[#ff2c1f] hover:text-white"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a
-          href="#"
-          class="flex items-center justify-center w-14 h-14 rounded-full text-2xl leading-[55px] bg-white text-[#ff2c1f] border-4 border-[rgba(2,3,7,0.4)] transition-all duration-200 hover:bg-[#ff2c1f] hover:text-white"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a
-          href="#"
-          class="flex items-center justify-center w-14 h-14 rounded-full text-2xl leading-[55px] bg-white text-[#ff2c1f] border-4 border-[rgba(2,3,7,0.4)] transition-all duration-200 hover:bg-[#ff2c1f] hover:text-white"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a
-          href="#"
-          class="flex items-center justify-center w-14 h-14 rounded-full text-2xl leading-[55px] bg-white text-[#ff2c1f] border-4 border-[rgba(2,3,7,0.4)] transition-all duration-200 hover:bg-[#ff2c1f] hover:text-white"
-          ><i class="fa-brands fa-tiktok"></i
-        ></a>
-      </div>
-    </footer>
-
-    <!-- copyrights -->
-    <div
-      class="py-[2.5rem] text-center text-white text-[1.1rem] max-lg:px-[4%] max-lg:py-[50px]"
-    >
-      <p>
-        &#169;
-        <span class="text-[#ff2c1f] cursor-pointer">Web Masters</span> All Right
-        Reserved.
-      </p>
-    </div>
-
-    <!-- javascript link -->
-    <script src="js/main.js"></script>
+    <header></header>
+    <main>
+      <section id="home"></section>
+      <section id="new-movies"></section>
+      <section id="coming-soon"></section>
+      <section id="newsletter"></section>
+    </main>
+    <footer></footer>
   </body>
 </html>

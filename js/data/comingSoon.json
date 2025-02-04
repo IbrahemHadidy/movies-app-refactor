@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Joney English",
+    "timeAndGenre": "80min | Comedy",
+    "image": "img/coming1.jpg",
+    "link": "#"
+  },
+  {
+    "title": "WarCrafet",
+    "timeAndGenre": "120min | Action",
+    "image": "img/coming2.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Rampage",
+    "timeAndGenre": "108min | Adventure",
+    "image": "img/coming3.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Airon Lady",
+    "timeAndGenre": "120min | Comedy",
+    "image": "img/coming4.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Justice League",
+    "timeAndGenre": "120min | Adventure",
+    "image": "img/coming5.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Doctor Strange",
+    "timeAndGenre": "120min | Adventure",
+    "image": "img/coming6.jpeg",
+    "link": "#"
+  },
+  {
+    "title": "Captain Marvel",
+    "timeAndGenre": "120min | Adventure",
+    "image": "img/coming7.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Black Widow",
+    "timeAndGenre": "90min | Action",
+    "image": "img/coming8.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Ant Man",
+    "timeAndGenre": "110min | Adventure",
+    "image": "img/coming9.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Guardiance Of The Galaxy",
+    "timeAndGenre": "120min | Adventure",
+    "image": "img/coming10.jpg",
+    "link": "#"
+  }
+]
