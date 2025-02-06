@@ -1,5 +1,10 @@
 "use strict";
 
+/**
+ * Load HTML content from a file and insert it into an element on the page.
+ * @param {string} selector - The CSS selector of the element where the HTML content will be inserted.
+ * @param {string} filePath - The path to the HTML file to load.
+ */
 export function loadSection(selector, filePath) {
   const element = document.querySelector(selector);
 
@@ -16,6 +21,13 @@ export function loadSection(selector, filePath) {
     .catch((error) => console.error(error));
 }
 
+/**
+ * Load HTML content from a file and insert it into an element on the page.
+ * @param {string} selector - The CSS selector of the element where the HTML content will be inserted.
+ * @param {string} filePath - The path to the HTML file to load.
+ * @param {object} data - An object containing data to replace placeholders in the template.
+ * @param {boolean} replaceContent - If true, clear existing content before adding new content.
+ */
 export function loadTemplate(
   selector,
   filePath,

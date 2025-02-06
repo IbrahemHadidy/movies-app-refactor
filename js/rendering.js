@@ -2,39 +2,80 @@
 
 import { homeSlides, newMovies, comingSoon } from "./dataFetching.js";
 import { loadTemplate } from "./loadHtml.js";
+import {
+  homeSection,
+  newMoviesSection,
+  comingSoonSection,
+} from "./selectors.js";
 
-// Home Slider
-export function startSlideshow() {
-  let i = 0;
-  // Function to update the slide
-  function updateSlide(i) {
-    document.querySelector("#home").style.backgroundImage = `url('${homeSlides[i].image}')`;
-    loadTemplate(
-      "#home",
-      "templates/home-slide.html",
-      homeSlides[i],
-      true
-    )
-  }
-  // Set the first slide immediately
-  updateSlide(i);
-  // Start the slideshow interval
-  setInterval(() => {
-    if (i === homeSlides.length - 1) {
-      i = 0;
+const maxTries = 5;
+
+/**
+ * Retry mechanism for rendering elements
+ */
+function retryUntilAvailable(section, callback, tries = 0) {
+  if (!section) {
+    if (tries < maxTries) {
+      setTimeout(() => retryUntilAvailable(section, callback, tries + 1), 200);
     } else {
-      i++;
+      console.error("Failed after multiple attempts.");
     }
+    return;
+  }
+  callback();
+}
+
+/**
+ * Starts a slideshow of home slides.
+ * @param {number} delay - The time interval between slides in milliseconds.
+ */
+export function startSlideshow(delay) {
+  let tryCount = 0;
+
+  if (!homeSection) {
+    if (tryCount < maxTries) {
+      tryCount++;
+      setTimeout(() => startSlideshow(delay), 200);
+      return;
+    }
+    console.error("Failed to start slideshow after multiple attempts.");
+    return;
+  }
+
+  if (!homeSlides || homeSlides.length === 0) {
+    console.error("No slides available for the slideshow.");
+    return;
+  }
+
+  let i = 0;
+
+  function updateSlide(i) {
+    homeSection.style.backgroundImage = `url('${homeSlides[i].image}')`;
+    loadTemplate("#home", "templates/home-slide.html", homeSlides[i], true);
+  }
+
+  updateSlide(i);
+
+  setInterval(() => {
+    i = (i + 1) % homeSlides.length;
     updateSlide(i);
-  }, 5000);
+  }, delay);
 }
 
-// New Movies render
+/**
+ * Renders new movies on the page.
+ */
 export function renderNewMovies() {
-  loadTemplate("#new-movies div", "templates/movie.html", newMovies);
+  retryUntilAvailable(newMoviesSection, () =>
+    loadTemplate("#new-movies div", "templates/movie.html", newMovies)
+  );
 }
 
-// Coming Soon Movies render
+/**
+ * Renders coming soon movies on the page.
+ */
 export function renderComingSoonMovies() {
-  loadTemplate("#coming-soon div", "templates/movie.html", comingSoon);
+  retryUntilAvailable(comingSoonSection, () =>
+    loadTemplate("#coming-soon div", "templates/movie.html", comingSoon)
+  );
 }

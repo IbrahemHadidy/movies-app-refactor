@@ -6,6 +6,10 @@ export let homeSlides = [];
 export let newMovies = [];
 export let comingSoon = [];
 
+/**
+ * Fetches data from json files and stores it in the respective arrays. 
+ * Then calls the rendering functions to render the data on the page.
+ */
 export async function fetchData() {
   try {
     // fetch and push home slides
@@ -27,7 +31,7 @@ export async function fetchData() {
     comingSoon.push(...comingSoonData);
 
     // Call the render functions
-    startSlideshow();
+    startSlideshow(5000);
     renderNewMovies();
     renderComingSoonMovies();
   } catch (error) {
